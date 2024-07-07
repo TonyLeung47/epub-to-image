@@ -1,0 +1,32 @@
+[project]
+name = "epub-to-image"
+version = "0.0.1"
+description = "Add your description here"
+authors = [
+    { name = "TonyLeung47", email = "142762268+TonyLeung47@users.noreply.github.com" }
+]
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "typer>=0.12.3",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pyinstaller>=6.9.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/epub_to_image"]
+
+[tool.ruff]
+line-length = 120
